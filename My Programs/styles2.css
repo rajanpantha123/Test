@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(36, 111, 111);
+   position: relative; /* Ensure positioning for the pseudo-element */
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("space.jpg"); /* Adjust the path if necessary */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Adjust opacity to your preference */
+    z-index: -1; /* Ensure the image stays behind all content */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 300px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(64, 14, 150, 0.2);
+    text-align: center;
+}
+h1 {
+    color: #ff0000;
+}
+p {
+    color: #05a244;
+}
+a {
+    color: #410f04;
+    text-decoration: none;
+    margin-top: 10px;
+}
+a:hover {
+    text-decoration: underline;
+}

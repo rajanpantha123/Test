@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(36, 111, 111);
+    position: relative;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("space.jpg"); /* Adjust the path if necessary */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust opacity to your preference */
+    z-index: -1; /* Ensure the image stays behind all content */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #090f66;
+    text-align: center;
+}
+
+.submit {
+    background-color: #0fb119;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #ff0000;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

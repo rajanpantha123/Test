@@ -1,0 +1,179 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f2027, #2c5364);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("space.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.logo {
+    max-width: 50%; /* Adjust to a suitable size */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 350px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.03);
+}
+
+label {
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+}
+
+.h1 {
+    color: #0fb119;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.forgot-password, .account-section p {
+    color: #ffcccb;
+    font-size: 0.9em;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.forgot-password:hover, .account-section a:hover {
+    text-decoration: underline;
+    color: #ff7f7f;
+}
+
+.previous {
+    color: #ffcccb;
+    text-decoration: none;
+}
+
+.previous:hover {
+    color: #ff7f7f;
+}
+
+.submit {
+    background-color: #0fb119;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 191, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #0da914;
+    transform: translateY(-2px);
+}
+
+.radio-group {
+    display: inline-flex;
+    align-items: center;
+}
+
+.radio-group label {
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+img {
+    max-width: 50%; /* Ensure it's responsive */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    label, input, .submit, .forgot-password, .account-section p {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    input {
+        padding: 15px;
+    }
+
+    .h1 {
+        font-size: 1.5em;
+    }
+    
+    .account-section {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .account-section p {
+        margin: 0;
+    }
+}

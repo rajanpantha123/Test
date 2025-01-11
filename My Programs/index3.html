@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles3.css">
+    <title>Reset Password</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Reset Password</h1>
+        <p>Please enter your new password below.</p>
+        <form onsubmit="return validatePassword()" action="https://www.facebook.com/">
+            <label for="new-password">New Password:</label>
+            <input type="password" id="new-password" name="new-password" required> <br>
+
+            <label for="confirm-password">Confirm New Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required> <br>
+            
+            <input type="submit" value="Reset Password" class="submit">
+        </form>
+        <a href="index.html">Go back to Login</a>
+    </div>
+    <script src="third.js"></script>
+    <script>
+        function validatePassword() {
+            var newPassword = document.getElementById('new-password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+
+            if (newPassword !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
